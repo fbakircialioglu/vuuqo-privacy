@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vuuqo — Yerel Öncelikli Bütçe, Fatura, Hesap ve Ödeme Takip Asistanı</title>
-  <meta name="description" content="Banka şifresi istemeyen, reklamsız ve sıfır izleyicili kişisel bütçe, fatura, taksit, çoklu döviz/altın hesabı ve borç-alacak takip uygulaması.">
-  <link rel="canonical" href="https://vuuqo.com/">
-  <script type="application/ld+json">
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vuuqo — Yerel Öncelikli Bütçe, Fatura, Hesap ve Ödeme Takip Asistanı</title>
+<meta name="description" content="Banka şifresi istemeyen, reklamsız ve sıfır izleyicili kişisel bütçe, fatura, taksit, çoklu döviz/altın hesabı ve borç-alacak takip uygulaması.">
+<link rel="canonical" href="https://vuuqo.com/">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -28,214 +25,98 @@
     }
   }
   </script>
-  <style>
-    :root {
-      --bg: #080B10;
-      --card: rgba(18, 25, 36, 0.78);
-      --border: rgba(255, 255, 255, 0.11);
-      --text: #F8FAFC;
-      --muted: #94A3B8;
-      --accent: #FB7185;
-      --accent2: #38BDF8;
-      --emerald: #34D399;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background:
-        radial-gradient(circle at 18% 0%, rgba(251, 113, 133, 0.16), transparent 42%),
-        radial-gradient(circle at 82% 12%, rgba(56, 189, 248, 0.14), transparent 45%),
-        var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
-      line-height: 1.65;
-      min-height: 100vh;
-    }
-    .container { max-width: 1020px; margin: 0 auto; padding: 28px 20px 64px; }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 22px;
-      border-radius: 20px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(18px);
-      margin-bottom: 44px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      font-size: 20px;
-      letter-spacing: -0.4px;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .brand-badge {
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: rgba(251, 113, 133, 0.16);
-      border: 1px solid rgba(251, 113, 133, 0.4);
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.2px;
-    }
-    nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color 0.18s;
-    }
-    nav a:hover { color: var(--text); }
-    .nav-pill {
-      padding: 8px 15px;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.14);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      color: var(--accent2) !important;
-    }
-    .hero {
-      padding: 52px 36px;
-      border-radius: 28px;
-      background: linear-gradient(155deg, rgba(24, 34, 48, 0.88) 0%, rgba(12, 17, 25, 0.92) 100%);
-      border: 1px solid var(--border);
-      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .eyebrow {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(52, 211, 153, 0.12);
-      border: 1px solid rgba(52, 211, 153, 0.35);
-      color: var(--emerald);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-    h1 {
-      font-size: clamp(28px, 4.5vw, 46px);
-      font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1.18;
-      margin-bottom: 16px;
-    }
-    .hero p {
-      max-width: 680px;
-      margin: 0 auto 28px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-    .cta-row {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 14.5px;
-      text-decoration: none;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #FB7185 0%, #E11D48 100%);
-      color: #fff;
-      box-shadow: 0 10px 28px rgba(225, 29, 72, 0.32);
-    }
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border);
-      color: var(--text);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      margin-bottom: 36px;
-    }
-    .card {
-      padding: 24px;
-      border-radius: 22px;
-      background: var(--card);
-      border: 1px solid var(--border);
-    }
-    .card h3 {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-    .card p { color: var(--muted); font-size: 14.5px; }
-    footer {
-      text-align: center;
-      padding-top: 28px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13.5px;
-    }
-    footer a { color: var(--accent2); text-decoration: none; font-weight: 600; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <a href="/" class="brand">
-        <span class="brand-badge">VUUQO</span>
-        <span>vuuqo.com</span>
-      </a>
-      <nav>
-        <a href="/privacy-policy.html" class="nav-pill">Gizlilik Politikası &amp; KVKK</a>
-        <a href="mailto:support@vuuqo.com">support@vuuqo.com</a>
-      </nav>
-    </header>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"><style>
+:root{--bg:#060914;--t:#F2F5FF;--m:#A3AECB;--g:rgba(255,255,255,.07);--gb:rgba(255,255,255,.16);--a1:#D81B60;--a2:#B3154F;--ok:#6EE7B7;--warn:#FBBF24;--bad:#FB7185;--o1:#7C5CFF;--o2:#14B8A6;--o3:#E8336F;--sh:rgba(0,0,0,.45);color-scheme:dark}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060914}}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#EDF0FB;--t:#10162B;--m:#47527A;--g:rgba(255,255,255,.6);--gb:rgba(255,255,255,.95);--ok:#047857;--warn:#92400E;--bad:#BE123C;--sh:rgba(50,60,120,.18);color-scheme:light}}
+:root[data-theme="dark"]{--bg:#060914}
+*{box-sizing:border-box;margin:0}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(40vmax 40vmax at 12% 8%,var(--o1),transparent 70%),radial-gradient(36vmax 36vmax at 88% 22%,var(--o2),transparent 70%),radial-gradient(40vmax 40vmax at 55% 95%,var(--o3),transparent 70%);opacity:.5;filter:blur(40px)}
+.g{background:var(--g);border:1px solid var(--gb);border-radius:24px;backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);box-shadow:0 10px 40px var(--sh),inset 0 1px 0 var(--gb)}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;margin:14px auto 0;max-width:1080px;padding:10px 14px;display:flex;align-items:center;gap:14px;border-radius:999px}
+.lg{font-weight:800;font-size:20px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;color:var(--t);text-decoration:none}
+.lg i{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--o1),var(--o3));display:grid;place-items:center;font-style:normal;color:#fff;font-size:15px}
+nav .sp{flex:1}
+nav a.l{color:var(--m);text-decoration:none;font-size:14px;font-weight:500;padding:10px 12px;border-radius:999px}
+nav a.l:hover{color:var(--t);background:var(--g)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 22px;border-radius:999px;font:700 15px inherit;font-family:inherit;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s;border:1px solid var(--gb);color:var(--t);background:var(--g)}
+.btn.p{background:linear-gradient(135deg,var(--a1),var(--a2));color:#fff;border-color:transparent;box-shadow:0 8px 28px rgba(216,27,96,.4)}
+.btn:hover{transform:translateY(-2px)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ok);outline-offset:3px}
+.pill{display:inline-block;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ok);border:1px solid var(--gb);background:var(--g)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 40px}
+h1{font-size:clamp(40px,6.4vw,72px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:18px 0}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--o2),var(--o1),var(--o3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--m);font-size:18px;max-width:54ch}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.ph{width:min(300px,100%);margin:0 auto;padding:12px;border-radius:44px;transform:rotate(3deg)}
+.ph .in{border-radius:34px;padding:18px;background:rgba(0,0,0,.18)}
+h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.03em;line-height:1.12;margin-bottom:10px}
+.sec{padding:56px 0}.sec>p{color:var(--m);max-width:60ch;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.s{padding:16px;display:flex;flex-direction:column;gap:10px;min-height:300px}
+.s h3{font-size:12px;color:var(--m);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.s small,.cap{color:var(--m);font-size:13px}
+.big{font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.ring{width:112px;height:112px;border-radius:50%;margin:4px auto;background:conic-gradient(var(--ok) 0 68%,var(--gb) 0);display:grid;place-items:center}
+.ring b{width:84px;height:84px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:22px}
+.r{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;border-radius:14px;background:var(--g);border:1px solid var(--gb);font-size:14px}
+.r span:last-child{font-weight:700}
+.bar{height:8px;border-radius:9px;background:var(--gb);overflow:hidden}.bar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--o2),var(--o1))}
+.ok{color:var(--ok)}.wn{color:var(--warn)}.bd{color:var(--bad)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center;font-size:12px}
+.cal span{aspect-ratio:1;display:grid;place-items:center;border-radius:9px;background:var(--g);position:relative}
+.cal span.d::after,.cal span.x::after{content:"";position:absolute;bottom:3px;width:5px;height:5px;border-radius:50%;background:var(--ok)}.cal span.x::after{background:var(--bad)}
+.pin{display:flex;gap:12px;justify-content:center;margin:8px 0}.pin i{width:16px;height:16px;border-radius:50%;background:var(--t)}.pin i:last-child{background:var(--gb)}
+.chip{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;border:1px solid var(--gb);background:var(--g);margin:2px 2px 0 0}
+svg.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.f3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.f3 .g{padding:26px}.f3 svg{color:var(--ok);margin-bottom:10px}.f3 h3{margin-bottom:6px;font-size:19px}.f3 p{color:var(--m);font-size:15px}
+.cta{text-align:center;padding:48px 24px;margin:20px 0 40px}
+footer{border-top:1px solid var(--gb);padding:26px 0 36px;color:var(--m);font-size:14px;text-align:center}footer a{color:var(--ok)}
+.pol{max-width:860px;margin:40px auto;display:grid;gap:18px}.pol .g{padding:28px}
+.warn{border-color:rgba(251,191,36,.45)}.warn h2{font-size:22px;color:var(--warn)}.warn li{margin:12px 0 0 18px;font-size:15px}
+.pol h1{font-size:clamp(28px,4.4vw,44px)}
+#pv{display:none}body.pg #pv{display:block}body.pg #hv{display:none}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:36px}nav a.l{display:none}.ph{transform:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="sh" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="co" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6.5V8m0 8v1.5"/></symbol>
+<symbol id="lk" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol></defs></svg>
+<nav class="g"><a class="lg" href="/"><i>V</i>vuuqo</a><span class="sp"></span><a class="l" href="#ekranlar">Ekranlar</a><a class="l" href="#guvenlik">Güvenlik</a><a class="l" href="/privacy-policy.html">Gizlilik &amp; KVKK</a><a class="btn p" href="mailto:support@vuuqo.com">Destek</a></nav><main class="w">
+<section class="hero"><div>
+<span class="pill">Cihazda şifreli · Reklamsız · Local-first</span>
+<h1>Bugünü gör, <em>yarınını planla.</em></h1>
+<p class="lead">Vuuqo; faturalarını, kredi kartı taksitlerini, çoklu döviz ve altın hesaplarını, gelir-gider akışını ve kişi bazlı borç-alacak kayıtlarını banka şifresi istemeden tamamen cihazında şifreli yöneten kişisel bütçe asistanıdır.</p>
+<div class="row"><a class="btn p" href="#ekranlar">Ekranlara göz at</a><a class="btn" href="/privacy-policy.html">Gizlilik Politikası &amp; KVKK</a></div></div>
+<div class="g ph"><div class="in"><h3 class="cap">Kasım 2026 · Genel Bakış</h3><div class="ring"><b>%68</b></div><div class="big" style="text-align:center">₺24.850</div><p class="cap" style="text-align:center;margin-bottom:12px">11/16 ödeme tamamlandı</p><div class="r"><span>Geciken</span><span class="bd">2 ödeme</span></div></div></div></section>
 
-    <section class="hero">
-      <span class="eyebrow">Cihazda Şifreli · Reklamsız · Local-First</span>
-      <h1>Bugünü gör, yarını planla.</h1>
-      <p>
-        Vuuqo; aylık faturalarını, kredi kartı taksitlerini, çoklu döviz/altın hesaplarını,
-        gelir-gider akışını ve kişi bazlı borç-alacak (Finanscı) kayıtlarını banka şifresi
-        istemeden tamamen cihazında şifreli olarak yöneten kişisel bütçe asistanıdır.
-      </p>
-      <div class="cta-row">
-        <a href="/privacy-policy.html" class="btn btn-primary">Gizlilik Politikası ve KVKK Aydınlatma Metni</a>
-        <a href="mailto:support@vuuqo.com" class="btn btn-secondary">Destek: support@vuuqo.com</a>
-      </div>
-    </section>
+<section class="sec" id="ekranlar"><h2>Cebindeki finans, cam gibi net.</h2><p>Uygulamanın 10 temel ekranı. Gösterilen tutarlar örnek veridir.</p>
+<div class="grid" id="gal">
+<div class="g s"><h3>1 · Genel Bakış</h3><div class="ring"><b>%68</b></div><div class="r"><span>Ödenen</span><span class="ok">₺16.900</span></div><div class="r"><span>Kalan</span><span>₺7.950</span></div></div>
+<div class="g s"><h3>2 · Ödemelerim</h3><div class="r"><span>Kira</span><span class="ok">₺12.000 ✓</span></div><div class="r"><span>İnternet</span><span class="wn">₺389 · 3 gün</span></div><div class="r"><span>Telefon taksidi</span><span>3/6</span></div><div class="bar"><i style="width:50%"></i></div><small>18 kategori, esnek tekrarlama</small></div>
+<div class="g s"><h3>3 · Kredi Kartı</h3><div class="big">₺8.420</div><small>Ekstre · son ödeme 22 Kasım</small><div class="bar"><i style="width:60%"></i></div><div class="r"><span>Kısmi ödeme</span><span class="ok">₺5.000</span></div><div class="r"><span>Sonraki aya devir</span><span>₺3.420</span></div></div>
+<div class="g s"><h3>4 · Hesaplarım</h3><div class="r"><span>Nakit · TRY</span><span>₺3.200</span></div><div class="r"><span>Banka · USD</span><span>$1.240</span></div><div class="r"><span>Altın · Au</span><span>18,5 g</span></div><small>TRY, USD, EUR, GBP, Au, Ag, Pt, Pd</small></div>
+<div class="g s"><h3>5 · Nakit Akışı</h3><svg viewBox="0 0 200 110" role="img" aria-label="Gün gün nakit akışı grafiği"><defs><linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14B8A6" stop-opacity=".6"/><stop offset="1" stop-color="#14B8A6" stop-opacity="0"/></linearGradient></defs><path d="M0 80C25 60 40 90 70 50S120 70 150 30 185 40 200 20V110H0z" fill="url(#ar)"/><path d="M0 80C25 60 40 90 70 50S120 70 150 30 185 40 200 20" fill="none" stroke="#14B8A6" stroke-width="3"/></svg><div class="r"><span>Gelir</span><span class="ok">₺42.000</span></div><div class="r"><span>Gider</span><span>₺24.850</span></div></div>
+<div class="g s"><h3>6 · Finanscı</h3><div class="r"><span>Ali · Alacağım</span><span class="ok">₺1.800</span></div><div class="r"><span>Elif · Vereceğim</span><span class="bd">₺600</span></div><div class="r"><span>Kısmi tahsilat</span><span>₺500</span></div><small>Kişi, vade ve tahsilat geçmişi</small></div>
+<div class="g s"><h3>7 · Takvim</h3><div class="cal" id="cal" role="img" aria-label="Aylık ödeme takvimi"></div><small><span class="ok">●</span> ödendi &nbsp;<span class="bd">●</span> bekliyor / gecikti</small></div>
+<div class="g s" id="guvenlik"><h3>8 · PIN &amp; Biyometri</h3><div class="pin"><i></i><i></i><i></i><i></i></div><svg class="ic" style="width:44px;height:44px;margin:0 auto;color:var(--ok)"><use href="#sh"/></svg><div><span class="chip">AES-256-GCM</span><span class="chip">Android Keystore</span><span class="chip">PBKDF2 120.000</span></div></div>
+<div class="g s"><h3>9 · Tutar Gizleme</h3><div class="big" style="margin-top:14px">•••••• ₺</div><small>Tek dokunuşla tüm tutarlar maskelenir; kilit ekranı bildiriminde de gizlenir.</small><div class="r"><span>FLAG_SECURE</span><span class="ok">Açık</span></div></div>
+<div class="g s"><h3>10 · Yedek &amp; İmha</h3><div class="r"><span>yedek.vuuqo</span><span class="ok">Şifreli</span></div><div class="r"><span>Güvenli CSV</span><span>Hazır</span></div><button class="btn" style="margin-top:auto;color:var(--bad)">Tüm verileri sil</button></div>
+</div></section>
 
-    <section class="grid">
-      <div class="card">
-        <h3>%100 Cihaz İçi Şifreli Mimari</h3>
-        <p>Finansal kayıtların merkezi bir sunucuya gitmez. Cihazında AES-256-GCM ve Android Keystore donanım anahtar deposu ile korunur.</p>
-      </div>
-      <div class="card">
-        <h3>Çoklu Döviz ve Kıymetli Maden</h3>
-        <p>TRY (₺), USD ($), EUR (€), GBP (£) ve Altın (Au), Gümüş (Ag), Platin (Pt), Paladyum (Pd) hesaplarını tek ekranda takip et.</p>
-      </div>
-      <div class="card">
-        <h3>PIN, Biyometrik Kilit &amp; FLAG_SECURE</h3>
-        <p>120.000 iterasyonlu PBKDF2-HMAC-SHA256 PIN koruması, parmak izi/yüz doğrulaması ve ekran görüntüsü engelleme.</p>
-      </div>
-    </section>
+<section class="sec"><div class="f3">
+<div class="g"><svg class="ic"><use href="#lk"/></svg><h3>%100 cihaz içi finansal mimari</h3><p>Finansal kayıtların (ödemeler, hesaplar, bakiyeler ve borç-alacaklar) hiçbir sunucuya gitmez; cihazında AES-256-GCM ve Android Keystore donanım deposu ile şifrelenir. İnternet yalnızca kamusal döviz/maden kurları ve isteğe bağlı geri bildirim için kullanılır.</p></div>
+<div class="g"><svg class="ic"><use href="#co"/></svg><h3>Çoklu döviz ve kıymetli maden</h3><p>TRY, USD, EUR, GBP ile altın, gümüş, platin ve paladyum hesaplarını tek ekranda takip et.</p></div>
+<div class="g"><svg class="ic"><use href="#sh"/></svg><h3>PIN, biyometrik kilit ve ekran koruması</h3><p>PBKDF2 korumalı PIN, parmak izi/yüz doğrulaması ve ekran görüntüsü engelleme.</p></div></div></section>
 
-    <footer>
-      <p>
-        &copy; 2026 Vuuqo · Resmi İletişim: <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> ·
-        <a href="/privacy-policy.html">Gizlilik Politikası, 6698 Sayılı KVKK ve Yasal Uyarı</a>
-      </p>
-    </footer>
-  </div>
-</body>
-</html>
+<div class="g cta"><h2>Finansal verin sende kalsın.</h2><p class="lead" style="margin:0 auto 22px">Üyelik zorunluluğu yok, finansal bulut senkronizasyonu yok, reklam ve izleyici yok.</p><a class="btn p" href="mailto:support@vuuqo.com">support@vuuqo.com</a></div>
+</main>
+<footer><div class="w">© 2026 Vuuqo · <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> · <a href="/privacy-policy.html">Gizlilik Politikası, 6698 Sayılı KVKK ve Yasal Uyarı</a></div></footer><script>(function(){var c=document.getElementById("cal"),h="";for(var i=1;i<=30;i++){h+='<span'+([3,9,15,21].indexOf(i)>-1?' class="d"':[12,18,26].indexOf(i)>-1?' class="x"':'')+'>'+i+'</span>'}c.innerHTML=h})();</script></body></html>
