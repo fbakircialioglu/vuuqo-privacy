@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuuqo — Yerel Öncelikli Bütçe, Fatura, Hesap ve Ödeme Takip Asistanı</title>
+  <meta name="description" content="Banka şifresi istemeyen, reklamsız ve sıfır izleyicili kişisel bütçe, fatura, taksit, çoklu döviz/altın hesabı ve borç-alacak takip uygulaması.">
+  <link rel="canonical" href="https://vuuqo.com/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Vuuqo: Bütçe & Ödeme Takip",
+    "operatingSystem": "Android, iOS, Web",
+    "applicationCategory": "FinanceApplication",
+    "description": "Banka şifresi istemeyen, %100 cihaz içi (AES-256-GCM + Android Keystore) şifreli kişisel bütçe, fatura, taksit, çoklu döviz/kıymetli maden hesabı ve borç-alacak takip uygulaması.",
+    "url": "https://vuuqo.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Vuuqo",
+      "email": "support@vuuqo.com",
+      "url": "https://vuuqo.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TRY"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #080B10;
+      --card: rgba(18, 25, 36, 0.78);
+      --border: rgba(255, 255, 255, 0.11);
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+      --accent: #FB7185;
+      --accent2: #38BDF8;
+      --emerald: #34D399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background:
+        radial-gradient(circle at 18% 0%, rgba(251, 113, 133, 0.16), transparent 42%),
+        radial-gradient(circle at 82% 12%, rgba(56, 189, 248, 0.14), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .container { max-width: 1020px; margin: 0 auto; padding: 28px 20px 64px; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 22px;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      margin-bottom: 44px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand-badge {
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(251, 113, 133, 0.16);
+      border: 1px solid rgba(251, 113, 133, 0.4);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+    }
+    nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.18s;
+    }
+    nav a:hover { color: var(--text); }
+    .nav-pill {
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--accent2) !important;
+    }
+    .hero {
+      padding: 52px 36px;
+      border-radius: 28px;
+      background: linear-gradient(155deg, rgba(24, 34, 48, 0.88) 0%, rgba(12, 17, 25, 0.92) 100%);
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      color: var(--emerald);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(28px, 4.5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.18;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 14.5px;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #FB7185 0%, #E11D48 100%);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(225, 29, 72, 0.32);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+    .card {
+      padding: 24px;
+      border-radius: 22px;
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .card p { color: var(--muted); font-size: 14.5px; }
+    footer {
+      text-align: center;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    footer a { color: var(--accent2); text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/" class="brand">
+        <span class="brand-badge">VUUQO</span>
+        <span>vuuqo.com</span>
+      </a>
+      <nav>
+        <a href="/privacy-policy.html" class="nav-pill">Gizlilik Politikası &amp; KVKK</a>
+        <a href="mailto:support@vuuqo.com">support@vuuqo.com</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">Cihazda Şifreli · Reklamsız · Local-First</span>
+      <h1>Bugünü gör, yarını planla.</h1>
+      <p>
+        Vuuqo; aylık faturalarını, kredi kartı taksitlerini, çoklu döviz/altın hesaplarını,
+        gelir-gider akışını ve kişi bazlı borç-alacak (Finanscı) kayıtlarını banka şifresi
+        istemeden tamamen cihazında şifreli olarak yöneten kişisel bütçe asistanıdır.
+      </p>
+      <div class="cta-row">
+        <a href="/privacy-policy.html" class="btn btn-primary">Gizlilik Politikası ve KVKK Aydınlatma Metni</a>
+        <a href="mailto:support@vuuqo.com" class="btn btn-secondary">Destek: support@vuuqo.com</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>%100 Cihaz İçi Şifreli Mimari</h3>
+        <p>Finansal kayıtların merkezi bir sunucuya gitmez. Cihazında AES-256-GCM ve Android Keystore donanım anahtar deposu ile korunur.</p>
+      </div>
+      <div class="card">
+        <h3>Çoklu Döviz ve Kıymetli Maden</h3>
+        <p>TRY (₺), USD ($), EUR (€), GBP (£) ve Altın (Au), Gümüş (Ag), Platin (Pt), Paladyum (Pd) hesaplarını tek ekranda takip et.</p>
+      </div>
+      <div class="card">
+        <h3>PIN, Biyometrik Kilit &amp; FLAG_SECURE</h3>
+        <p>120.000 iterasyonlu PBKDF2-HMAC-SHA256 PIN koruması, parmak izi/yüz doğrulaması ve ekran görüntüsü engelleme.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2026 Vuuqo · Resmi İletişim: <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> ·
+        <a href="/privacy-policy.html">Gizlilik Politikası, 6698 Sayılı KVKK ve Yasal Uyarı</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuuqo — Gizlilik Politikası, 6698 Sayılı KVKK Aydınlatma Metni ve Yasal Uyarı</title>
+  <meta name="description" content="Vuuqo yerel öncelikli (local-first) kişisel bütçe, fatura, kredi kartı, altın/döviz ve borç-alacak takip uygulaması Gizlilik Politikası, 6698 sayılı KVKK Aydınlatma Metni ve SPK/BDDK Yasal Uyarısı.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Vuuqo: Bütçe, Fatura & Hesap",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Android, Web",
+        "softwareVersion": "0.16.0",
+        "url": "https://vuuqo.com",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "TRY"
+        },
+        "description": "Vuuqo; aylık faturaları, kredi kartı ekstrelerini, taksitleri, altın/döviz hesaplarını, gelir-gider akışını ve kişi bazlı borç-alacak (Finanscı) kayıtlarını banka şifresi istemeden cihaz içinde AES-256-GCM şifrelemesiyle takip eden yerel öncelikli kişisel finans uygulamasıdır."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Vuuqo finansal verileri sunucuya gönderir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Vuuqo yerel öncelikli (local-first) mimariyle çalışır. Ödeme planları, hesap bakiyeleri, gelir-gider ve borç-alacak kayıtları yalnızca kullanıcının kendi cihazında AES-256-GCM ve Android Keystore donanım anahtarıyla şifrelenerek saklanır; merkezi bir sunucuya aktarılmaz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vuuqo içinde izinsiz analitik, reklam SDK'sı veya banka bağlantısı var mı?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Vuuqo hiçbir banka hesabına bağlanmaz, kart numarası veya CVV istemez, SMS/rehber okumaz ve Mixpanel, Google Analytics, AppsFlyer veya reklam SDK'sı gibi hiçbir üçüncü taraf izleyici barındırmaz."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b1210;
+      --card: #121c18;
+      --border: #22352d;
+      --text: #eef4f1;
+      --muted: #9eb3aa;
+      --accent: #6ee7b7;
+      --warn-bg: #1d1912;
+      --warn-border: #6b5322;
+      --warn-accent: #fbbf24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 36px 16px 64px;
+      background: radial-gradient(circle at top right, #163128 0%, var(--bg) 52%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.68;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    header {
+      padding: 28px;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #062118;
+      background: var(--accent);
+      margin-bottom: 10px;
+    }
+    .lang-nav {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .lang-nav a {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #182721;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    h1 { margin: 0 0 8px; font-size: 27px; letter-spacing: -0.02em; }
+    .meta { color: var(--muted); font-size: 14px; margin: 0; }
+    section {
+      padding: 24px 28px;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    section.disclaimer {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+    }
+    section.disclaimer h2 { color: var(--warn-accent); }
+    h2 { margin: 0 0 12px; font-size: 19px; color: var(--accent); }
+    p, li { color: var(--text); font-size: 15px; margin-top: 0; }
+    ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    a { color: var(--accent); }
+    code {
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #1a2822;
+      color: #c5f7e2;
+      font-size: 13px;
+    }
+    .divider {
+      margin: 40px 0 24px;
+      border: 0;
+      border-top: 1px solid var(--border);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header id="tr">
+      <span class="badge">VUUQO · GİZLİLİK POLİTİKASI &amp; KVKK AYDINLATMA METNİ</span>
+      <h1>Vuuqo Gizlilik Politikası, 6698 Sayılı KVKK Aydınlatma Metni ve Yasal Uyarı</h1>
+      <p class="meta">Uygulama: <strong>Vuuqo</strong> · Sürüm: 0.16.0+27 · Yürürlük ve Son Güncelleme: 15 Kasım 2026 · Resmi İletişim: <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a>)</p>
+      <div class="lang-nav">
+        <a href="#tr">Türkçe (KVKK &amp; Gizlilik)</a>
+        <a href="#spk-uyari">Finansal Yasal Uyarı (SPK / BDDK)</a>
+        <a href="#kvkk-ayrim">Aydınlatma &amp; Açık Rıza Ayrımı</a>
+        <a href="#kvkk-haklar">KVKK Madde 11 Hakları</a>
+        <a href="#en">English (Privacy Policy &amp; GDPR)</a>
+      </div>
+    </header>
+
+    <section class="disclaimer" id="spk-uyari">
+      <h2>Önemli Finansal ve Hukuki Yasal Uyarı (SPK, BDDK ve 6493 Sayılı Kanun Kapsamında Feragatname)</h2>
+      <ul>
+        <li><strong>Finansal Kuruluş veya Ödeme Hizmeti Değildir:</strong> <strong>Vuuqo</strong>; 5411 sayılı Bankacılık Kanunu kapsamında bir banka, 6493 sayılı Ödeme ve Menkul Kıymet Mutabakat Sistemleri, Ödeme Hizmetleri ve Elektronik Para Kuruluşları Hakkında Kanun kapsamında bir ödeme veya elektronik para kuruluşu veya 6362 sayılı Sermaye Piyasası Kanunu (SPK) kapsamında bir aracı kurum ya da portföy yönetim şirketi <strong>değildir</strong>. Uygulama üzerinden hiçbir şekilde para transferi, ödeme aracılığı, kredi tahsisi, mevduat toplama veya döviz/kıymetli maden alım-satım işlemi gerçekleştirilmez.</li>
+        <li><strong>Yatırım Tavsiyesi Niteliği Taşımaz (SPK Uyarısı):</strong> Uygulama içerisinde gösterilen döviz kurları (<code>TRY</code>, <code>USD</code>, <code>EUR</code>, <code>GBP</code>), kıymetli maden referans değerleri (Altın <code>Au</code>, Gümüş <code>Ag</code>, Platin <code>Pt</code>, Paladyum <code>Pd</code>), grafikler, analizler ve kredi kartı/taksit hesaplamaları yalnızca kullanıcının kendi girdiği kayıtları tek para biriminde yaklaşık olarak görebilmesi amacıyla kamuya açık kaynaklardan çekilen <strong>gecikmeli ve bilgilendirme amaçlı referans verilerdir</strong>. Bu veriler 6362 sayılı Sermaye Piyasası Kanunu ve ilgili tebliğler kapsamında <strong>kesinlikle yatırım danışmanlığı veya yatırım tavsiyesi değildir</strong>.</li>
+        <li><strong>Kullanıcı Sorumluluğu:</strong> Döviz ve maden kurlarında kesinti, gecikme veya sapmalar yaşanabilir. Fatura son ödeme tarihleri, kredi kartı ekstre kesim/son ödeme günleri, faiz oranları ve vergi/komisyon tutarları konusunda her zaman ilgili bankanızın veya resmi kurumun güncel kayıtları esas alınmalıdır.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>1. Veri Sorumlusu ve Temel Çalışma Prensibi (Yerel Öncelikli Mimari)</h2>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (<strong>"KVKK"</strong>) uyarınca bu aydınlatma metni, <strong>Vuuqo</strong> yönetimi (Veri Sorumlusu Resmi İletişim: <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> / <a href="mailto:vuuqo@support.com">vuuqo@support.com</a>) tarafından hazırlanmıştır.</p>
+      <p>Vuuqo <strong>yerel öncelikli (local-first / çevrimdışı)</strong> bir kişisel bütçe, ödeme, gelir–gider, hesap ve borç–alacak takip uygulamasıdır. Uygulamaya kaydettiğiniz finansal veriler <strong>tarafımıza ait herhangi bir merkezi sunucuya aktarılmaz ve sunucularımızda depolanmaz</strong>.</p>
+    </section>
+
+    <section>
+      <h2>2. Yalnızca Cihazınızda Yerel Olarak Saklanan Veriler ve Sıfır İzleyici Garantisi</h2>
+      <p>Aşağıdaki veriler yalnızca sizin cihazınızın uygulama içi özel depolama alanında şifreli olarak tutulur ve üçüncü kişilerce erişilemez:</p>
+      <ul>
+        <li>Ödeme planları, fatura/taksit/abonelik vade tarihleri, tutarlar, kategoriler ve kişisel notlar</li>
+        <li>Gelir–gider kayıtları, aylık gelir planları ve Finanscı (kişi bazlı borç–alacak) kayıtları</li>
+        <li>Elle eklediğiniz hesap adları, hesap türleri, para birimleri, kredi kartı limit/borçları ve bakiye hareketleri</li>
+        <li>Yerel profil adları ve uygulama içi tercihler (tema, renk paleti, dil, ana para birimi, bildirim saatleri, tutar gizleme / hayalet modu tercihi)</li>
+      </ul>
+      <p><strong>İzinsiz Analitik, Reklam SDK'sı ve Banka Bağlantısı Yoktur:</strong> Vuuqo hiçbir banka hesabına veya açık bankacılık API'sine bağlanmaz; internet bankacılığı şifresi, tam kart numarası veya CVV istemez; cihazınızdaki SMS mesajlarını, telefon rehberini, fotoğrafları veya konumu okumaz. Uygulamada açık rıza öncesi veya sonrasında başlatılan hiçbir üçüncü taraf analitik/izleme aracı (Mixpanel, Google Analytics, AppsFlyer, Amplitude, Meta Pixel vb.), reklam SDK'sı, davranışsal profilleme veya bulut tabanlı yapay zeka (LLM) veri aktarımı <strong>bulunmaz</strong>.</p>
+    </section>
+
+    <section>
+      <h2>3. Cihaz İçi Kriptografik Güvenlik ve Veri İhlali Önlemleri (KVKK Madde 12)</h2>
+      <ul>
+        <li><strong>Yerel Veritabanı Şifrelemesi:</strong> Cihazdaki yerel kayıtlar uygulama katmanında <code>AES-256-GCM</code> ve <code>HMAC-SHA256</code> bütünlük doğrulaması ile şifrelenir; şifreleme anahtarı Android donanım anahtar deposu (<code>Android Keystore — vuuqo_keystore_master_v1</code>) ile sarmalanarak korunur.</li>
+        <li><strong>4 Haneli PIN Koruması:</strong> Oluşturduğunuz PIN kodu düz metin olarak saklanmaz; kriptografik rastgele tuz (salt) ve <strong>120.000 iterasyonlu</strong> <code>PBKDF2-HMAC-SHA256</code> özeti (<code>pinHash</code>) alınarak Android Keystore korumalı güvenli kasada (<code>vuuqo_secure_vault</code>) tutulur. Ardışık hatalı denemelerde monotonik donanım saati destekli artan bekleme kilidi (5. denemede 30 sn, 6. denemede 60 sn ve üstel geri çekilme) uygulanır.</li>
+        <li><strong>Biyometrik Kilit Açma:</strong> <code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code> izinleri yalnızca işletim sisteminin resmi <code>BiometricPrompt</code> doğrulaması için kullanılır. Parmak izi veya yüz verileriniz cihazın güvenli donanımından dışarı çıkmaz ve Vuuqo tarafından okunamaz.</li>
+        <li><strong>Ekran Görüntüsü ve Pano Koruması:</strong> Android'de <code>FLAG_SECURE</code> pencere koruması aktiftir; son uygulamalar ekranında ve ekran kaydında finansal veriler ve PIN ekranı gizlenir. Uygulama içinden kopyalanan hassas metinler Android 13+ üzerinde <code>EXTRA_IS_SENSITIVE</code> bayrağıyla işaretlenir ve 60 saniye sonra panodan otomatik temizlenir.</li>
+        <li><strong>Şifreli Yedekleme, Girdi Doğrulama ve Güvenli CSV Dışa Aktarma:</strong> Android otomatik bulut yedeklemesi kapalıdır (<code>android:allowBackup="false"</code>). Yedek dosyaları (<code>.vuuqo</code>) yalnızca sizin belirlediğiniz parola ile (<code>PBKDF2-HMAC-SHA256</code> + <code>AES-256-GCM</code>) şifrelenerek kaydedilir; içe aktarımlarda <code>JSONGuard</code> derinlik ve boyut doğrulaması uygulanır. CSV dışa aktarımları tablo formül enjeksiyonuna (<code>=</code>, <code>+</code>, <code>-</code>, <code>@</code>) karşı otomatik temizlenir.</li>
+        <li><strong>Sıfır İstemci API Anahtarı ve Kota Koruması:</strong> Uygulama istemci kodunda hiçbir üçüncü taraf ücretli API veya yapay zeka anahtarı barındırılmaz. Geri bildirim aktarıcısında HTML/XSS temizleme (<code>escapeHtml</code>) ve sıkı kota tavanı (dakikada 1, cihaz başına günde 2, sistem genelinde 80 istek) uygulanır. Olası bir güvenlik/veri ihlali tespit edilmesi halinde KVKK m.12/5 ve GDPR m.33 uyarınca 72 saat içinde ilgili kuruma ve etkilenen kişilere bildirim yapılır.</li>
+      </ul>
+    </section>
+
+    <section id="kvkk-ayrim">
+      <h2>4. Aydınlatma Metni ile Açık Rıza Ayrımı ve İnternet Erişimi (KVKK Madde 5, 8, 9 ve 10)</h2>
+      <p><strong>Aydınlatma ve Açık Rıza Ayrımı İlkesi:</strong> 6698 sayılı KVKK ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca işbu Aydınlatma Metni salt bilgilendirme amaçlıdır; uygulamayı kullanmak için "gizlilik politikasını ve açık rızayı tek kutuda onaylama" gibi bir zorunluluk dayatılmaz. Uygulamanın temel bütçe/ödeme takip işlevlerinin tamamı hiçbir veri aktarımı olmadan çevrimdışı çalışır.</p>
+      <p>Uygulama yalnızca aşağıdaki iki sınırlı durumda HTTPS (TLS) üzerinden ağ bağlantısı kurar:</p>
+      <ol>
+        <li>
+          <strong>Kamusal Döviz ve Kıymetli Maden Referans Kurları:</strong>
+          <p>Uygulama açılışında veya yenilemede <code>https://api.frankfurter.dev</code>, <code>https://cdn.jsdelivr.net</code> ve <code>https://latest.currency-api.pages.dev</code> adreslerinden yalnızca kamuya açık döviz ve kıymetli maden referans oranları indirilir. Bu isteklere hiçbir finansal kaydınız, bakiyeniz veya kimlik bilginiz eklenmez. İnternet protokolünün teknik doğası gereği, bağlanılan kur sunucularına yalnızca standart ağ isteği bilgileri (IP adresi ve standart HTTP başlıkları) ulaşır (Hukuki sebep: <em>KVKK Md. 5/2-c ve Md. 5/2-f — uygulamanın döviz çevirisi işlevinin yerine getirilmesi</em>).</p>
+        </li>
+        <li>
+          <strong>İsteğe Bağlı Kullanıcı Geri Bildirim Formu ve Yurt Dışı Aktarım Açık Rızası (KVKK Madde 9):</strong>
+          <p>Yalnızca siz kendi özgür iradenizle <em>Ayarlarım → Test geri bildirimi</em> ekranını açıp mesajınızı yazarak <strong>"Gönder"</strong> butonuna bastığınızda aşağıdaki sınırlı bilgiler <code>HTTPS</code> üzerinden işlenir:</p>
+          <ul>
+            <li>Seçtiğiniz geri bildirim kategorisi (Öneri, Hata, Tasarım, Diğer) ve yazdığınız mesaj metni (metin içine yanlışlıkla yazılabilecek IBAN, kredi kartı numarası veya TCKN kalıpları gönderim öncesinde cihaz içinde otomatik olarak maskelenir),</li>
+            <li>Size dönüş yapılmasını istiyorsanız <strong>isteğe bağlı</strong> olarak girdiğiniz yanıt e-posta adresi,</li>
+            <li>Uygulama sürümü/platform etiketi (örn. <code>Android</code>) ve günlük kota/spam sınırını (cihaz başına günde en fazla 2 mesaj, dakikada en fazla 1 istek) uygulamak için cihazda rastgele üretilen anonim kurulum tanımlayıcısı (<code>installId</code>).</li>
+          </ul>
+          <p><strong>Yurt Dışı Aktarım Bilgilendirmesi ve Açık İrade Beyanı (KVKK Md. 9):</strong> Geri bildirim mesajınız, e-posta iletiminin sağlanması amacıyla Google Apps Script / Gmail (Google LLC) aktarım servisi üzerinden <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a> — Zoho Mail kurumsal e-posta altyapısı) destek kutusuna iletilir. Bu altyapıların sunucuları Türkiye dışında bulunabilir; geri bildirim formundaki bağımsız bilgilendirme uyarınca yalnızca siz <strong>"Gönder"</strong> eylemini gerçekleştirdiğinizde mesajınızın ve (yazdıysanız) e-posta adresinizin destek talebinizin yanıtlanması amacıyla bu e-posta altyapısı üzerinden iletilmesine açık rıza vermiş olursunuz (Hukuki sebep: <em>KVKK Md. 5/1 ve Md. 9 açık rıza, Md. 5/2-e bir hakkın tesisi ve Md. 5/2-f meşru menfaat</em>).</p>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>5. Uygulama İçi Tek Dokunuşla Veri İmha ("Tüm Verileri Sil") ve Saklama Süreleri</h2>
+      <ul>
+        <li><strong>Uygulama İçi Tek Tıkla Veri Silme Butonu:</strong> KVKK Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik ve Google Play Veri Silme Politikası uyarınca, uygulama içerisindeki <strong>Ayarlarım → Bu cihazda saklanıyor → Tüm verileri sil</strong> butonuna dokunarak cihazdaki tüm ödeme, hesap, gelir–gider ve Finanscı kayıtlarınızı tek dokunuşla ve kalıcı olarak silebilirsiniz. Ayrıca Android <strong>Ayarlar → Uygulamalar → Vuuqo → Depolamayı Temizle</strong> adımıyla veya uygulamayı kaldırarak tüm şifreleme anahtarlarını ve yerel veritabanını anında imha edebilirsiniz.</li>
+        <li><strong>Geri Bildirim Kota Sayaçları (<code>installId</code>):</strong> Spam ve kötüye kullanımı önlemek için tutulan günlük gönderim sayaçları, sunucu tarafında <strong>7 gün sonunda otomatik olarak silinir</strong> (<code>cleanupOldProperties</code>).</li>
+        <li><strong>Destek E-postaları:</strong> İsteğe bağlı gönderdiğiniz geri bildirim e-postaları, destek talebiniz sonuçlandıktan sonra en fazla <strong>1 (bir) yıl</strong> içinde veya <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a>) adresine göndereceğiniz silme talebi üzerine <strong>derhal</strong> silinir.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Uygulama İzinleri ve Çocukların Gizliliği (18+)</h2>
+      <ul>
+        <li><code>INTERNET</code>: Yalnızca referans döviz kurlarının indirilmesi ve isteğe bağlı geri bildirim gönderimi için kullanılır.</li>
+        <li><code>POST_NOTIFICATIONS</code> ve <code>RECEIVE_BOOT_COMPLETED</code>: Ödeme ve borç/alacak hatırlatmalarını cihaz içinde yerel olarak zamanlamak ve cihaz yeniden başlatıldığında hatırlatmaları korumak için kullanılır.</li>
+        <li><code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code>: İsteğe bağlı uygulama kilidini cihazın yerel biyometrik doğrulamasıyla açmak için kullanılır.</li>
+        <li><strong>Hedef Kitle ve Çocukların Gizliliği:</strong> Vuuqo, 18 yaş ve üzeri yetişkin kullanıcıların kişisel bütçe ve ödeme takibi için tasarlanmıştır; 13 yaş (veya ilgili ülke mevzuatındaki dijital rıza yaşı) altındaki çocuklara yönelik değildir ve çocuklardan bilerek veri toplamaz.</li>
+      </ul>
+    </section>
+
+    <section id="kvkk-haklar">
+      <h2>7. 6698 Sayılı KVKK Madde 11 Kapsamındaki Haklarınız ve Başvuru Yöntemi</h2>
+      <p>KVKK'nın 11. maddesi uyarınca Veri Sorumlusuna (<a href="mailto:support@vuuqo.com">support@vuuqo.com</a> / <a href="mailto:vuuqo@support.com">vuuqo@support.com</a>) başvurarak aşağıdaki haklarınızı kullanabilirsiniz:</p>
+      <ol type="a">
+        <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
+        <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
+        <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+        <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,</li>
+        <li>Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
+        <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
+        <li>(e) ve (f) bentleri uyarınca yapılan işlemlerin, kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+        <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
+        <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme.</li>
+      </ol>
+      <p><strong>Başvuru Usulü:</strong> Taleplerinizi <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> veya <a href="mailto:vuuqo@support.com">vuuqo@support.com</a> e-posta adresine iletebilirsiniz. Başvurularınız talebin niteliğine göre en kısa sürede ve <strong>en geç 30 (otuz) gün</strong> içinde ücretsiz olarak sonuçlandırılır.</p>
+    </section>
+
+    <hr class="divider" id="en">
+
+    <header>
+      <span class="badge">VUUQO · PRIVACY POLICY &amp; GDPR / PLAY STORE DISCLOSURE (ENGLISH)</span>
+      <h1>Vuuqo Privacy Policy &amp; Financial Disclaimer</h1>
+      <p class="meta">Application: <strong>Vuuqo</strong> · Version: 0.16.0+27 · Effective Date: November 15, 2026 · Official Contact: <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a>)</p>
+    </header>
+
+    <section class="disclaimer">
+      <h2>Important Financial &amp; Legal Disclaimer (Not Financial or Investment Advice)</h2>
+      <ul>
+        <li><strong>Not a Bank, Payment Institution, or Broker:</strong> <strong>Vuuqo</strong> is a local-first personal finance and bill-tracking utility. It is <strong>not</strong> a bank, payment processor, electronic money institution, lender, or licensed investment advisor. Vuuqo does not execute money transfers, process payments, issue credit, or buy/sell currencies or precious metals.</li>
+        <li><strong>No Investment Advice:</strong> Exchange rates (<code>TRY</code>, <code>USD</code>, <code>EUR</code>, <code>GBP</code>), precious metal rates (<code>Au</code>, <code>Ag</code>, <code>Pt</code>, <code>Pd</code>), charts, and credit-card/installment calculations are provided solely as approximate, informational reference tools from public sources and <strong>do not constitute financial, legal, tax, or investment advice</strong>. Always verify statement dates, balances, and rates with your official financial institution.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>1. Local-First Architecture &amp; Zero-Tracker Guarantee</h2>
+      <p>Vuuqo operates on a strict <strong>local-first (offline)</strong> model. Your payment plans, bills, income/expense entries, account balances, credit limits, and personal IOU records are stored <strong>exclusively on your device</strong> inside an application-encrypted SQLite database (<code>AES-256-GCM</code> + <code>HMAC-SHA256</code> wrapped by Android Keystore hardware keys). We do not operate a cloud database of user financial records, do not connect to bank accounts, do not read SMS/contacts/location, and do not include advertising SDKs, third-party analytics trackers (such as Mixpanel, Google Analytics, AppsFlyer, or Amplitude), or AI/LLM data collection.</p>
+    </section>
+
+    <section>
+      <h2>2. On-Device Security Controls &amp; In-App Data Deletion</h2>
+      <ul>
+        <li><strong>PIN &amp; Biometric Protection:</strong> Your optional 4-digit PIN is never stored in plaintext; it is hashed using salted <code>PBKDF2-HMAC-SHA256</code> (120,000 iterations) and stored in an Android Keystore-backed encrypted vault with monotonic-clock exponential backoff lockout. Optional biometric unlock uses the OS <code>BiometricPrompt</code>; raw biometric data never leaves device hardware.</li>
+        <li><strong>Screen &amp; Clipboard Protection:</strong> Android <code>FLAG_SECURE</code> prevents task-switcher snapshots and screen recording of balances and PIN entry. Copied sensitive strings are marked with <code>EXTRA_IS_SENSITIVE</code> and auto-cleared after 60 seconds.</li>
+        <li><strong>Backups &amp; Exports:</strong> Automatic OS cloud backup is disabled (<code>android:allowBackup="false"</code>). Manual <code>.vuuqo</code> backups are encrypted with your chosen password (<code>PBKDF2-HMAC-SHA256</code> + <code>AES-256-GCM</code>), and CSV exports are sanitized against spreadsheet formula injection.</li>
+        <li><strong>One-Tap In-App Data Deletion:</strong> You can permanently wipe all local records at any time directly inside the app via <strong>Settings → Stored on this device → Delete all data</strong>, by clearing app storage in Android settings, or by uninstalling the app.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Network Requests, Legal Basis (GDPR Art. 6 &amp; Art. 49) &amp; Data Retention</h2>
+      <ol>
+        <li><strong>Public Reference Exchange Rates:</strong> When refreshing rates, the app makes read-only HTTPS requests to <code>api.frankfurter.dev</code>, <code>cdn.jsdelivr.net</code>, and <code>latest.currency-api.pages.dev</code>. No user financial records or identifiers are sent; only standard network metadata (such as IP address) is visible to the rate host (<em>GDPR Art. 6(1)(b) performance of requested app functionality</em>).</li>
+        <li><strong>Optional In-App Feedback Form:</strong> Only if you voluntarily submit feedback under <em>Settings → Feedback</em>, the app sends your topic, message text (with client-side masking for IBAN/card/ID number patterns), optional reply email address, app version/platform label, and a random per-install rate-limit token (<code>installId</code>) over HTTPS via Google Apps Script / Gmail to <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a> — Zoho Mail) (<em>GDPR Art. 6(1)(a) &amp; Art. 49(1)(a) explicit consent &amp; Art. 6(1)(f) legitimate interest in abuse prevention</em>).</li>
+      </ol>
+      <p><strong>Retention &amp; Deletion:</strong> On-device data remains on your device until you delete entries, use the in-app <em>Delete all data</em> button, clear app storage, or uninstall the app. Server-side rate-limit counters (<code>installId</code>) expire automatically within <strong>7 days</strong>. Support emails are deleted within <strong>1 year</strong> or immediately upon request to <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a>).</p>
+    </section>
+
+    <section>
+      <h2>4. Your Rights Under GDPR &amp; KVKK and Contact</h2>
+      <p>You have the right to access, rectify, erase, restrict, or object to processing of any personal data you have submitted via support/feedback, and to withdraw consent at any time. To exercise your rights or request immediate deletion of support correspondence, contact <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> (<a href="mailto:vuuqo@support.com">vuuqo@support.com</a>). Requests are answered free of charge within 30 days.</p>
+    </section>
+
+    <footer>
+      Vuuqo · https://vuuqo.com · Resmi İletişim / Official Contact: <a href="mailto:support@vuuqo.com">support@vuuqo.com</a> · <a href="mailto:vuuqo@support.com">vuuqo@support.com</a>
+    </footer>
+  </main>
+</body>
+</html>
